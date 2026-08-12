@@ -1,0 +1,28 @@
+file,column,business_definition,notes
+customers.csv,customer_id,Unique customer identifier,Primary Key
+customers.csv,customer_segment,Customer value segment,Premium / Regular / Occasional
+customers.csv,region,Geographic region,North / South / East / West
+customers.csv,income,Estimated annual income,Missing values and outliers
+products.csv,product_id,Unique product identifier,Primary Key
+products.csv,category,Main product category,Missing/inconsistent values
+products.csv,cost_price,Product acquisition cost,Invalid negative values included
+products.csv,selling_price,Customer selling price,Zero/extreme values included
+orders.csv,order_id,Unique order identifier,Primary Key
+orders.csv,customer_id,Customer placing order,Foreign Key to customers
+orders.csv,order_status,Order lifecycle state,Delivered / Cancelled / Returned / Pending
+orders.csv,order_value,Order-level value,Missing/negative/extreme values
+order_items.csv,order_item_id,Unique line item,Primary Key
+order_items.csv,order_id,Associated order,Foreign Key to orders
+order_items.csv,product_id,Purchased product,Foreign Key to products
+order_items.csv,quantity,Units purchased,Zero/negative values included
+order_items.csv,item_revenue,Line-item revenue,Derived metric
+order_items.csv,profit,Line-item profit,Derived metric
+customer_interactions.csv,interaction_id,Unique interaction,Primary Key
+customer_interactions.csv,customer_id,Customer performing interaction,Foreign Key to customers
+customer_interactions.csv,interaction_type,Digital activity,Login / View / Search / Cart / Purchase
+customer_interactions.csv,converted,Whether interaction converted,Boolean
+marketing_campaigns.csv,campaign_event_id,Unique campaign event,Primary Key
+marketing_campaigns.csv,customer_id,Targeted customer,Foreign Key to customers
+marketing_campaigns.csv,campaign_channel,Marketing channel,Email / Social / Search / SMS / Push
+marketing_campaigns.csv,converted,Whether campaign converted,Boolean
+marketing_campaigns.csv,attributed_revenue,Attributed revenue,Intentional anomalies included

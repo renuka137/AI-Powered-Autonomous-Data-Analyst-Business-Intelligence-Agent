@@ -1,0 +1,7 @@
+file,records
+customers.csv,30250
+products.csv,2030
+orders.csv,150500
+order_items.csv,351000
+customer_interactions.csv,201000
+marketing_campaigns.csv,20300
